@@ -6,6 +6,7 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import Image from 'next/image'
 import { AiOutlineMenu } from 'react-icons/ai'
+import MobileNav from './MobileNav'
 
 
 const Header = () => {
@@ -46,7 +47,7 @@ const Header = () => {
           className='fixed bg-primary top-0 bottom-0 right-0 w-[300px] xl:hidden z-50'
 
         >
-          mobile nav
+          <MobileNav setMobileNav={setMobileNav} />
         </motion.div>
       </div>
     </header>

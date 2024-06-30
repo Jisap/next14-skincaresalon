@@ -1,8 +1,12 @@
+import { IoCloseOutline } from 'react-icons/io5'
 
-
-const MobileNav = () => {
+const MobileNav = ({ setMobileNav }) => {
   return (
-    <div>MobileNav</div>
+    <nav className='text-white'>
+      <div className='cursor-pointer' onClick={() => setMobileNav(false)}>
+        <IoCloseOutline  className='text-4xl'/>
+      </div>
+    </nav>
   )
 }
 
