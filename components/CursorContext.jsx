@@ -32,7 +32,7 @@ const CursorProvider = ({ children }) => {
       mouseX.set(e.clientX - cursor.size /2);                // Se actualizan los valores de mouseX y mouseY con los valores del cursor
       mouseY.set(e.clientY - cursor.size / 2);               // y se resta la mitad del tamaño del cursor a las coordenadas del mouse para centrar el cursor personalizado en el punto del mouse.
     }else{
-      setCursor({ size: 0, background: none });              // Si la ventana es más pequeña o igual a 1200px de ancho (smallViewportIsActive es true), se oculta el cursor personalizado.
+      setCursor({ size: 0, background: "none" });              // Si la ventana es más pequeña o igual a 1200px de ancho (smallViewportIsActive es true), se oculta el cursor personalizado.
     }
   }
 
