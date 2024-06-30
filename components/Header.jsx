@@ -7,6 +7,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { AiOutlineMenu } from 'react-icons/ai'
 import MobileNav from './MobileNav'
+import Nav from './Nav'
 
 
 const Header = () => {
@@ -49,6 +50,10 @@ const Header = () => {
         >
           <MobileNav setMobileNav={setMobileNav} />
         </motion.div>
+        {/* desktop nav */}
+        <div className='hidden xl:block'>
+          <Nav />
+        </div>
       </div>
     </header>
   )
