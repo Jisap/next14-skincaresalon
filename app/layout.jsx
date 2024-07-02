@@ -2,6 +2,7 @@ import { Marcellus, Montserrat } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import CursorProvider from "@/components/CursorContext";
+import Transition from "@/components/Transition";
 
 
 const marcellus = Marcellus({ 
@@ -26,6 +27,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className="h-screen">
       <body className={`${marcellus.variable} ${montserrat.variable} overflow-hidden`}>
         <CursorProvider>
+          <Transition />
           <Header />
           {children}
         </CursorProvider>
