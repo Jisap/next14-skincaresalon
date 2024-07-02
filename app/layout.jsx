@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import CursorProvider from "@/components/CursorContext";
 import Transition from "@/components/Transition";
+import PageTransition from "@/components/PageTransition";
 
 
 const marcellus = Marcellus({ 
@@ -29,7 +30,9 @@ export default function RootLayout({ children }) {
         <CursorProvider>
           <Transition />
           <Header />
-          {children}
+          <PageTransition>
+            {children}
+          </PageTransition>
         </CursorProvider>
       </body>
     </html>
