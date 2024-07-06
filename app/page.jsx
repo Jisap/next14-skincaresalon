@@ -62,9 +62,19 @@ const Home = () => {
           </motion.div>
           {/* image */}
           <div className='flex-1'>
-            <div className='hidden xl:flex fixed bottom-0'>
+            <motion.div 
+              initial={{ opacity: 0, bottom: '-100%' }}
+              animate={{
+                opacity: 1,
+                bottom: 0,
+                transition: { delay: 2.4, duration: 1.2, ease: "easeInOut" }
+              }}
+              onMouseEnter={mouseEnterHandler}
+              onMouseLeave={mouseLeaveHandler}
+              className='hidden xl:flex fixed bottom-0'
+            >
               <Image src={"/assets/home/img.png"} alt="" width={864} height={650} quality={100} />
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
