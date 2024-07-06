@@ -49,6 +49,7 @@ const Header = () => {
           </div>
         </div>
       </div>
+      
       <div className='container mx-auto flex items-center justify-between px-6'>
         {/* logo */}
         <motion.div
