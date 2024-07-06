@@ -10,7 +10,7 @@ import ModalVideo from '@/components/ModalVideo'
 
 const Home = () => {
   
-  const { mouseEnterhandler, mouseLeaveHandler } = useContext(CursorContext)
+  const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext)
 
   return (
     <motion.section
@@ -21,20 +21,45 @@ const Home = () => {
       <div className='container mx-auto'>
         <div className='flex flex-col xl:flex-row items-center h-full'>
           {/* text */}
-          <div className='w-full text-center xl:text-left xl:w-[500px] pt-[120px]'>
-            <h1 className='h1 mb-6'>
+          <motion.div 
+            initial={{opacity: 0, y: -100}}  
+            animate={{
+              opacity: 1, 
+              y: 0,
+              transition: { delay: 2, duration: 1, ease: "easeInOut"}  
+            }}
+            className='w-full text-center xl:text-left xl:w-[500px] pt-[120px]'
+          >
+            <motion.h1 
+              className='h1 mb-6'
+              onMouseEnter={mouseEnterHandler}
+              onMouseLeave={mouseLeaveHandler}  
+            >
               Natural Beauty <br /> Starts Here
-            </h1>
-            <p className='lead max-w-xl mx-auto'>
+            </motion.h1>
+            <motion.p 
+              className='lead max-w-xl mx-auto'
+              onMouseEnter={mouseEnterHandler}
+              onMouseLeave={mouseLeaveHandler}
+            >
               Tailored skincare solutions for a healthy complexion, offering customized care for radiant skin
-            </p>
+            </motion.p>
             <div className='flex flex-col xl:flex-row items-center gap-6 max-w-max mx-auto xl:mx-0'>
-              <button className='btn btn-lg'>Book an appointment</button>
-              <div >
+              <motion.button 
+                className='btn btn-lg'
+                onMouseEnter={mouseEnterHandler}
+                onMouseLeave={mouseLeaveHandler}
+              >
+                Book an appointment
+              </motion.button>
+              <motion.div
+                onMouseEnter={mouseEnterHandler}
+                onMouseLeave={mouseLeaveHandler}
+              >
                 <ModalVideo />
-              </div>
+              </motion.div>
             </div>
-          </div>
+          </motion.div>
           {/* image */}
           <div className='flex-1'>
             <div className='hidden xl:flex fixed bottom-0'>
