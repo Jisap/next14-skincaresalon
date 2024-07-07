@@ -1,6 +1,7 @@
 "use client"
 
 import { CursorContext } from '@/components/CursorContext'
+import StatsItem from '@/components/StatsItem'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import React, { useContext } from 'react'
@@ -29,6 +30,24 @@ const About = () => {
             <h2 className='h2 mb-6 mx-auto max-w-[540px] xl:max-w-none'>
               Commited to Your Skin's Health and Beauty
             </h2>
+            <p className='lead max-w-[600px] mx-auto xl:mx-0'>
+              Tailored skincare solutions for a healty complexion, offering customized care for radiant skin.
+            </p>
+            {/* items */}
+            <div className='grid grid-cols-3 gap-[30px] mb-14 mx-auto xl:mx-0'>
+              <div>
+                <StatsItem />
+              </div>
+              <div>
+                <StatsItem />
+              </div>
+              <div>
+                <StatsItem />
+              </div>
+              <div>
+                <StatsItem />
+              </div>
+            </div>
           </div>
         </div>
       </div>
