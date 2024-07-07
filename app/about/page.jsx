@@ -36,16 +36,24 @@ const About = () => {
             {/* items */}
             <div className='grid grid-cols-3 gap-[30px] mb-14 mx-auto xl:mx-0'>
               <div>
-                <StatsItem />
+                <StatsItem 
+                  countNum={13}
+                  text='Years On Market'
+                />
               </div>
               <div>
-                <StatsItem />
+                <StatsItem 
+                  countNum={35}
+                  countText='k+'
+                  text='Happy Clients'
+                />
               </div>
               <div>
-                <StatsItem />
-              </div>
-              <div>
-                <StatsItem />
+                <StatsItem 
+                  countNum={97}
+                  countText='%'
+                  text='Natural Ingredients'
+                />
               </div>
             </div>
           </div>
