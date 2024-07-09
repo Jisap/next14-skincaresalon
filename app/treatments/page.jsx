@@ -94,7 +94,17 @@ const Treatments = () => {
             <button className='btn mx-auto xl:mx-0'>Discover more</button>
           </motion.div>
           {/* image */}
-          <div className='hidden relative xl:flex w-[384px] h-[534px]'>
+          <motion.div 
+            onMouseEnter={mouseEnterHandler}
+            onMouseLeave={mouseLeaveHandler} 
+            initial={{ opacity: 0, x: 60 }}
+            animate={{
+              opacity: 1,
+              x: 0,
+              transition: { delay: 2.4, duration: 0.8, ease: 'easeInOut' },
+            }}  
+            className='hidden relative xl:flex w-[384px] h-[534px]'
+          >
             <Image 
               src='/assets/treatments/img.jpg'
               fill
@@ -102,7 +112,7 @@ const Treatments = () => {
               alt=''
               className='object-contain'
             />
-          </div>
+          </motion.div>
         </div>  
       </div>
     </motion.section>
