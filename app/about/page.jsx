@@ -7,6 +7,9 @@ import Image from 'next/image'
 import React, { useContext } from 'react'
 
 const About = () => {
+
+  const { mouseEnterHandler, mouseLeaveHandler } = useContext(CursorContext)
+
   return (
     <motion.section
       initial={{opacity: 0}}
@@ -17,6 +20,8 @@ const About = () => {
         <div className='w-full h-full flex flex-col xl:flex-row items-center justify-between'>
           {/* image */}
           <motion.div 
+            onMouseEnter={mouseEnterHandler}
+            onMouseLeave={mouseLeaveHandler}
             initial={{opacity:0, x: -60}}
             animate={{
               opacity: 1,
@@ -31,10 +36,21 @@ const About = () => {
               quality={100}
               priorityalt=''
               className='object-contain'
+              alt='about_image'
             />
           </motion.div>
           {/* text */}
-          <div className='flex flex-col items-start xl:max-w-[650px] text-center xl:text-left mx-auto xl:mx-0'>
+          <motion.div
+            onMouseEnter={mouseEnterHandler}
+            onMouseLeave={mouseLeaveHandler} 
+            initial={{ opacity: 0, x: 60 }}
+            animate={{
+              opacity: 1,
+              x: 0,
+              transition: { delay: 2.4, duration: 0.8, ease: 'easeInOut' }
+            }}  
+            className='flex flex-col items-start xl:max-w-[650px] text-center xl:text-left mx-auto xl:mx-0'
+          >
             <h2 className='h2 mb-6 mx-auto max-w-[540px] xl:max-w-none'>
               Commited to Your Skin's Health and Beauty
             </h2>
@@ -64,7 +80,9 @@ const About = () => {
                 />
               </div>
             </div>
-          </div>
+            {/* btn */}
+            <button className='btn mx-auto xl:mx-0'>Contact us</button>
+          </motion.div>
         </div>
       </div>
     </motion.section>
