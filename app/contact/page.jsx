@@ -21,7 +21,17 @@ const Treatments = () => {
       <div className='container mx-auto pt-48 pb-12 xl:pt-32 xl:pb-0'>
         <div className='flex flex-col gap-12 xl:flex-row h-full'>
           {/* text */}
-          <div>
+          <motion.div 
+            onMouseEnter={mouseEnterHandler}
+            onMouseLeave={mouseLeaveHandler}
+            initial={{ opacity: 0, x: -660 }}
+            animate={{
+              opacity: 1,
+              x: 0,
+              transition: { delay: 2, duration: 0.8, ease: 'easeInOut' }
+            }}    
+            className='flex-1 flex flex-col justify-center'
+          >
             <h3 className='h3 mb-8 text-center xl:text-left'>
               Contact info
             </h3>
@@ -78,10 +88,13 @@ const Treatments = () => {
               </div>
               {/* end item */}
             </div>
-          </div>
+          </motion.div>
           {/* form */}
-          <div>
-            <Form />
+          <div className='flex-1'>
+            <div className='bg-[#f0cfbc] w-full max-w-[580px] gap-4 p-10 mx-auto xl:mx-0'>
+              <h3 className='h3 mb-8 text-center'>Get in touch</h3>
+              <Form />
+            </div>
           </div>
         </div>
       </div>
