@@ -24,7 +24,7 @@ const Treatments = () => {
           <motion.div 
             onMouseEnter={mouseEnterHandler}
             onMouseLeave={mouseLeaveHandler}
-            initial={{ opacity: 0, x: -660 }}
+            initial={{ opacity: 0, x: -60 }}
             animate={{
               opacity: 1,
               x: 0,
@@ -90,12 +90,22 @@ const Treatments = () => {
             </div>
           </motion.div>
           {/* form */}
-          <div className='flex-1'>
+          <motion.div 
+            onMouseEnter={mouseEnterHandler}
+            onMouseLeave={mouseLeaveHandler}
+            initial={{ opacity: 0, x: 60 }}
+            animate={{
+              opacity: 1,
+              x: 0,
+              transition: { delay: 2.4, duration: 0.8, ease: 'easeInOut' }
+            }}    
+            className='flex-1'
+          >
             <div className='bg-[#f0cfbc] w-full max-w-[580px] gap-4 p-10 mx-auto xl:mx-0'>
               <h3 className='h3 mb-8 text-center'>Get in touch</h3>
               <Form />
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </motion.section>
