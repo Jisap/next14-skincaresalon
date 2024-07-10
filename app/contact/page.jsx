@@ -47,15 +47,18 @@ const Treatments = () => {
               <div className='flex items-start gap-4'>
                 {/* icon */}
                 <div className='relative w-[36px] h-[36px]'>
-                  <Image src="/assets/contact/pin.svg" fill alt="" />
+                  <Image src="/assets/contact/phone.svg" fill alt="" />
                 </div>
                 <div className='pt-1 flex-1'>
-                  <h4 className='h4 mb-2'>Address</h4>
-                  <p className='leading-relaxed'>
-                    123/45 Elm St, Suite 800
-                    <br />
-                    Los Angeles, CA 90012
-                  </p>
+                  <h4 className='h4 mb-2'>Phone number</h4>
+                  <div className='pt-1 flex-1'>
+                    <p>
+                      Phone: +99(0) 999 333 667
+                    </p>
+                    <p>
+                      Fax: +99(0) 999 322 678
+                    </p>
+                  </div>
                 </div>
               </div>
               {/* end item */}
@@ -63,15 +66,14 @@ const Treatments = () => {
               <div className='flex items-start gap-4'>
                 {/* icon */}
                 <div className='relative w-[36px] h-[36px]'>
-                  <Image src="/assets/contact/pin.svg" fill alt="" />
+                  <Image src="/assets/contact/email.svg" fill alt="" />
                 </div>
                 <div className='pt-1 flex-1'>
-                  <h4 className='h4 mb-2'>Address</h4>
-                  <p className='leading-relaxed'>
-                    123/45 Elm St, Suite 800
-                    <br />
-                    Los Angeles, CA 90012
-                  </p>
+                  <h4 className='h4 mb-2'>Email address</h4>
+                  <div className='flex flex-col gap-1'>
+                    <p>info@youremail</p>
+                    <p>supportinfo@youremail</p>
+                  </div>
                 </div>
               </div>
               {/* end item */}
