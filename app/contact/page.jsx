@@ -16,7 +16,7 @@ const Treatments = () => {
     <motion.section
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { delay: 2 } }}
-      className='min-h-screen flex items-center overflow-x-hidden'
+      className='h-screen flex items-center overflow-x-hidden'
     >
       <div className='container mx-auto pt-48 pb-12 xl:pt-32 xl:pb-0'>
         <div className='flex flex-col gap-12 xl:flex-row h-full'>
@@ -101,7 +101,7 @@ const Treatments = () => {
             }}    
             className='flex-1'
           >
-            <div className='bg-[#f0cfbc] w-full max-w-[580px] gap-4 p-10 mx-auto xl:mx-0'>
+            <div className='bg-[#f0cfbc] w-full max-w-[580px] gap-4 p-10 mx-auto'>
               <h3 className='h3 mb-8 text-center'>Get in touch</h3>
               <Form />
             </div>
